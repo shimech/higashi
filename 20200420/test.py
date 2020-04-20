@@ -1,6 +1,7 @@
 import unittest
 from src.tuple_list import tuple_list
 from src.letter_n_gram_list import letter_n_gram_list
+from src.inc_freq import inc_freq
 
 
 class TestTupleList(unittest.TestCase):
@@ -63,6 +64,23 @@ class TestLetterNGramList(unittest.TestCase):
 
         for s, n, expected in zip(ss, ns, expecteds):
             self.assertEqual(expected, letter_n_gram_list(s, n))
+
+
+class TestIncFreq(unittest.TestCase):
+    def test_inc_freq(self):
+        ss = [
+            "Is this a pen?",
+            "Hello."
+        ]
+        d = {"a": 0, "e": 1, "s": 2, ".": 3}
+        expecteds = [
+            {"a": 1, "e": 2, "s": 4, ".": 3},
+            {"a": 1, "e": 3, "s": 4, ".": 4},
+        ]
+
+        for s, expected in zip(ss, expecteds):
+            inc_freq(s, d)
+            self.assertEqual(expected, d)
 
 
 if __name__ == "__main__":
