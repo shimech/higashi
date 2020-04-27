@@ -71,7 +71,6 @@ git version 2.26.2
 ### 4. pyenv のインストール
 
 ```shell
-$ cd ~
 $ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 $ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
 $ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
