@@ -5,6 +5,7 @@ from pre2.inc_digits import inc_digits
 from ex2.tuple_list import tuple_list
 from pre3.letter_n_gram_list import letter_n_gram_list
 from pre3.inc_freq import inc_freq
+from ex3.transpose import transpose
 
 
 class TestClassifyTriangle(unittest.TestCase):
@@ -141,6 +142,23 @@ class TestIncFreq(unittest.TestCase):
         for s, expected in zip(ss, expecteds):
             inc_freq(s, d)
             self.assertEqual(expected, d)
+
+
+class TestTranspose(unittest.TestCase):
+    def test_transpose(self):
+        Ms = [
+            [[1, 2, 3], [4, 5, 6]],
+            [[0]],
+            [[1, 2, 3]]
+        ]
+        expecteds = [
+            [[1, 4], [2, 5], [3, 6]],
+            [[0]],
+            [[1], [2], [3]]
+        ]
+
+        for M, expected in zip(Ms, expecteds):
+            self.assertEqual(expected, transpose(M))
 
 
 if __name__ == "__main__":
