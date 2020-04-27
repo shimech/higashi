@@ -124,6 +124,7 @@ Alternatively, run a command inside the virtualenv with pipenv run.
 ```shell
 $ pwd
 {なんでもいい}/higashi
+$ git pull origin master
 $ pipenv run test
 test_between (__main__.TestBetween) ... ok
 test_classify_triangle (__main__.TestClassifyTriangle) ... ok
