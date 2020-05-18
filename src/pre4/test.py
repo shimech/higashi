@@ -1,14 +1,20 @@
 import unittest
-from ..utils import Utils
 from replace_kutoten import replace_kutoten
 from text_file_len import text_file_len
+
+import sys
+sys.path.append("./src")
 
 
 class TestReplaceKutoten(unittest.TestCase):
     def setUp(self):
+        from utils import Utils
+
         self.dirname = Utils.make_dir("./tmp")
 
     def tearDown(self):
+        from utils import Utils
+
         Utils.remove_dir(self.dirname)
 
     def test_replace_kutoten(self):

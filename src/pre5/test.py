@@ -1,6 +1,6 @@
 import unittest
 from dice import dice
-from com_sim import com_sim
+from cos_sim import cos_sim
 
 
 class TestDice(unittest.TestCase):

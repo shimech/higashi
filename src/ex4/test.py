@@ -1,11 +1,15 @@
 import unittest
-from ..utils import Utils
 from split_iterable import split_iterable
+
+import sys
+sys.path.append("./src")
 
 
 class TestSplitIterable(unittest.TestCase):
     def setUp(self):
         import os
+        from utils import Utils
+
         self.dirname = Utils.make_dir("./tmp")
 
         self.filename = os.path.join(self.dirname, "gokigenyou.txt")
@@ -13,6 +17,8 @@ class TestSplitIterable(unittest.TestCase):
             f.write("こんにちは。\nごきげんよう。\n\nさようなら。\n")
 
     def tearDown(self):
+        from utils import Utils
+
         self.f.close()
         Utils.remove_dir(self.dirname)
 
