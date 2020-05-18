@@ -34,8 +34,10 @@ $ pipenv install
 ### テストの実行
 
 ```shell
-$ pipenv run test
+$ pipenv run test {DIRNAMES}
 ```
+
+※ `DIRNAMES` を指定せずに実行すると、すべてのテストを実行する。
 
 ## インストール手順
 
