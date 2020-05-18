@@ -1,5 +1,6 @@
 import unittest
 from find_max_indices import find_max_indices
+from drop_first import drop_first
 
 
 class TestFindMaxIndices(unittest.TestCase):
@@ -9,6 +10,15 @@ class TestFindMaxIndices(unittest.TestCase):
 
         for M, expected in zip(Ms, expecteds):
             self.assertEqual(expected, find_max_indices(M))
+
+
+class TestDropFirst(unittest.TestCase):
+    def test_drop_first(self):
+        iterables = [[1, 2, 3]]
+        expecteds = [[2, 3]]
+
+        for iterable, expected in zip(iterables, expecteds):
+            self.assertEqual(expected, list(drop_first(iterable)))
 
 
 if __name__ == "__main__":
