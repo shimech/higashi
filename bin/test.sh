@@ -1,7 +1,6 @@
 #!/bin/sh
 
 if [ $# -eq 0 ]; then
-    FILES=./src/*/test.py
     for file in ./src/*/test.py; do
         echo "### Testing $file ... ###"
         pipenv run python $file -v
