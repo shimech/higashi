@@ -45,6 +45,12 @@ $ pipenv run test {DIRNAMES}
 
 ※ `DIRNAMES` を指定せずに実行すると、すべてのテストを実行する。
 
+### Jupyter Notebook の起動
+
+```shell
+$ pipenv run jupyter notebook
+```
+
 ## インストール手順
 
 ```shell
