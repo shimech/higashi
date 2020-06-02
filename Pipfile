@@ -12,6 +12,7 @@ scipy = "*"
 pandas = "*"
 scikit-learn = "*"
 janome = "*"
+jupyter = "*"
 
 [requires]
 python_version = "3.8"

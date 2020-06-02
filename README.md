@@ -27,6 +27,7 @@
 | `ex6/`       | 1. 頻出単語リストの作成                                                              | ?                                                                                                  |
 | `pre7/`      | 1. pandas ライブラリ <br> 2. scikit-learn ライブラリ                                 | `pandas` <br> 機械学習！AI！                                                                       |
 | `project1/`  | Wikipedia の自動分類をしよう                                                         | 各カテゴリの頻出単語から生成されたベクトルを参照し、コサイン類似度を用いて記事をカテゴライズする。 |
+| `project2/`  | 自分のアイディアで手法を改良しよう                                                   | `project1`の課題を、手法を変えて高精度化する。                                                     |
 
 ## コマンド一覧
 
@@ -43,6 +44,12 @@ $ pipenv run test {DIRNAMES}
 ```
 
 ※ `DIRNAMES` を指定せずに実行すると、すべてのテストを実行する。
+
+### Jupyter Notebook の起動
+
+```shell
+$ pipenv run jupyter notebook
+```
 
 ## インストール手順
 
